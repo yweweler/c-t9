@@ -79,10 +79,10 @@ void example_evaluation(t9_model_t *const model) {
  * Autocomplete a given input sequence based on the statistical model.
  * @param model Pointer to the model to be used for completion.
  */
-void example_autocomplete(t9_model_t *const model) {
+void example_autocomplete(t9_model_t *const model, const char * text) {
     t9_timer_t timer;
     t9_symbol_t *suggestion;
-    const t9_symbol_t const *input = (const t9_symbol_t const *) "366253#87867";
+    const t9_symbol_t * input = (const t9_symbol_t *)text;
 
     // Autocomplete a given input sequence based onm the model.
     printf("[Completion]: Typing sequence: \"%s\"\n", (const char *) input);
@@ -109,11 +109,11 @@ int main() {
     model = t9_model_create();
 
     // Load the whole file for model training.
-    train_file = "../data/trump/twitter.txt";
+    train_file = "../data/trump/stripped.txt";
     train_symbols = 0;
 
     // Use only 1000 symbols for testing.
-    test_file = "../data/trump/twitter.txt";
+    test_file = "../data/trump/stripped.txt";
     test_symbols = 1000;
 
     // Load corpus.
@@ -139,7 +139,7 @@ int main() {
     model->search_tree = t9_search_tree_create();
 
     // Example 1: Simple completion of text.
-    example_autocomplete(model);
+    example_autocomplete(model, "366253#87867");
 
     // Example 2: Evaluation of the statistical model.
     // example_evaluation(model);
