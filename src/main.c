@@ -109,11 +109,11 @@ int main() {
     model = t9_model_create();
 
     // Load the whole file for model training.
-    train_file = "../data/trump/stripped.txt";
+    train_file = "../data/trump/twitter.txt";
     train_symbols = 0;
 
     // Use only 1000 symbols for testing.
-    test_file = "../data/trump/stripped.txt";
+    test_file = "../data/trump/twitter.txt";
     test_symbols = 1000;
 
     // Load corpus.
