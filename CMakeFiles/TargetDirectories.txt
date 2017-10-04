@@ -1,3 +1,0 @@
-/tmp/c-t9/CMakeFiles/rebuild_cache.dir
-/tmp/c-t9/CMakeFiles/t9.dir
-/tmp/c-t9/CMakeFiles/edit_cache.dir
