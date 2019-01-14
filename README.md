@@ -63,7 +63,7 @@ Here the evaluation of a model with a ngram length of four and an evaluation tex
 There are two main parameters that control the model creation process:
 
 * **ngram_length**: The Ngram length to use for building the statistical  model.
-* **number_paths**: After every T9 key entered, the system generates a sugegstion and prunes the internal tree structure. ```number_paths``` defines how many of the best paths (different suggestions) should survive the pruning. Therefore, in the end there exist up to this number of text suggestions for an entered key sequence.
+* **number_paths**: After every T9 key entered, the system generates a suggestion and prunes the internal tree structure. ```number_paths``` defines how many of the best paths (different suggestions) should survive the pruning. Therefore, in the end there exist up to this number of text suggestions for an entered key sequence.
 
 
 
