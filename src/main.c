@@ -32,12 +32,7 @@
   ******************************************************************************
   */
 
-#include <stdlib.h>
-#include <stdio.h>
-
-#include "t9/corpus.h"
-#include "t9/tree.h"
-#include "t9/timer.h"
+#include "main.h"
 
 
 void build_corpus_tree(t9_model_t *const model) {
