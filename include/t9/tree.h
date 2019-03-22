@@ -35,7 +35,7 @@
 #ifndef C_T9_TREE_H
 #define C_T9_TREE_H
 
-#include <kvec/kvec.h>
+#include "libraries/kvec/kvec.h"
 
 // Forward declarations of trees to break cyclic redundancy.
 struct struct_t9_corpus_node_t;
@@ -49,7 +49,7 @@ typedef struct struct_t9_search_node_t t9_search_node_t;
 
 #include "t9/node.h"
 #include "t9/model.h"
-#include <list/list.h>
+#include "libraries/list/list.h"
 
 #define PROBABILITY_BUTTON 1.0
 

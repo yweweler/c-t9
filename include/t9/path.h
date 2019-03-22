@@ -37,7 +37,7 @@
 
 #define kvec_path_t(type) struct struct_kvec_path {size_t n, m; type *a; }
 
-#include <kvec/kvec.h>
+#include "libraries/kvec/kvec.h"
 
 // Forward declarations of path to break cyclic redundancy.
 struct struct_t9_path_t;

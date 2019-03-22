@@ -38,7 +38,7 @@
 #define kvec_cnode_t(type) struct struct_kvec_cnode {size_t n, m; type *a; }
 #define kvec_snode_t(type) struct struct_kvec_snode {size_t n, m; type *a; }
 
-#include <kvec/kvec.h>
+#include "libraries/kvec/kvec.h"
 
 // Forward declarations of nodes to break cyclic redundancy.
 struct struct_t9_corpus_tree_t;
@@ -57,7 +57,7 @@ typedef kvec_cnode_t(t9_corpus_node_t *) t9_corpus_node_vector_t;
 typedef kvec_snode_t(t9_search_node_t *) t9_search_node_vector_t;
 
 #include <stdbool.h>
-#include <list/list.h>
+#include "libraries/list/list.h"
 
 #include "t9/corpus.h"
 #include "t9/math.h"
