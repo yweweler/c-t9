@@ -35,6 +35,11 @@
 #ifndef C_T9_NODE_H
 #define C_T9_NODE_H
 
+// We use asprintf.
+// This function is a GNU extension, not in C or POSIX.
+#define _GNU_SOURCE
+#include <stdio.h>
+
 #define kvec_cnode_t(type) struct struct_kvec_cnode {size_t n, m; type *a; }
 #define kvec_snode_t(type) struct struct_kvec_snode {size_t n, m; type *a; }
 

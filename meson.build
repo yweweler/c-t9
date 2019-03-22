@@ -25,6 +25,10 @@ compiler_args = compiler.get_supported_arguments([
     '-Wdeclaration-after-statement',
     '-Wuninitialized',
     #'-Wshorten-64-to-32',
+
+    # We are using GNU extensions.
+    '-DGNUC',
+    '-DGNU_COMPILER',
 ])
 math_dep = compiler.find_library('m', required : true)
 add_project_arguments(compiler_args, language: 'c')
