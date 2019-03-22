@@ -98,7 +98,7 @@ typedef struct struct_t9_search_node_t t9_search_node_t;
  * @return Pointer to a new corpus node.
  */
 t9_corpus_node_t *
-t9_corpus_node_create();
+t9_corpus_node_create(void);
 
 /*!
  * Destroy a corpus node.
@@ -175,7 +175,7 @@ t9_corpus_node_add_child(t9_corpus_node_t *const node,
  * @return Pointer to a new search node.
  */
 t9_search_node_t *
-t9_search_node_create();
+t9_search_node_create(void);
 
 /*!
  * Destroy a search node.

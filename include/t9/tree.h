@@ -81,7 +81,7 @@ typedef struct struct_t9_search_tree_t t9_search_tree_t;
  * @return Pointer to a new corpus tree.
  */
 t9_corpus_tree_t *
-t9_corpus_tree_create();
+t9_corpus_tree_create(void);
 
 /*!
  * Destroy a corpus tree.
@@ -142,7 +142,7 @@ t9_corpus_tree_finalize(t9_corpus_tree_t *const tree);
  * @return Pointer to a new search tree.
  */
 t9_search_tree_t *
-t9_search_tree_create();
+t9_search_tree_create(void);
 
 /*!
  * Destroy a search tree.

@@ -35,7 +35,7 @@
 #include "t9/model.h"
 
 t9_model_t *
-t9_model_create() {
+t9_model_create(void) {
     t9_model_t *model;
 
     // Allocate memory.

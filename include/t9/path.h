@@ -68,7 +68,7 @@ typedef struct struct_t9_path_t t9_path_t;
  * @return Pointer to the newly created path.
  */
 t9_path_t *
-t9_path_create();
+t9_path_create(void);
 
 /*!
  * Destroy a path.

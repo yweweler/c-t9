@@ -98,7 +98,7 @@ void example_autocomplete(t9_model_t *const model, const char * text) {
     free(suggestion);
 }
 
-int main() {
+int main(void) {
     t9_timer_t timer;
     t9_model_t *model;
     const char *train_file;

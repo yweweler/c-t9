@@ -66,7 +66,7 @@ typedef struct t9_model_struct t9_model_t;
  * @return Pointer to a new model.
  */
 t9_model_t *
-t9_model_create();
+t9_model_create(void);
 
 /*!
  * Destroy an existing model. All contained data is destroyed automatically.

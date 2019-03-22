@@ -38,7 +38,7 @@
 /* === Corpus node ================================================================== */
 
 t9_corpus_node_t *
-t9_corpus_node_create() {
+t9_corpus_node_create(void) {
     t9_corpus_node_t *node;
 
     // Allocate memory.
@@ -176,7 +176,7 @@ t9_corpus_node_add_child(t9_corpus_node_t *const node,
 /* === Search tree ================================================================== */
 
 t9_search_node_t *
-t9_search_node_create() {
+t9_search_node_create(void) {
     t9_search_node_t *node;
 
     // Allocate memory.
