@@ -32,12 +32,7 @@
   ******************************************************************************
   */
 
-#include <stdlib.h>
-#include <stdio.h>
-
-#include "t9/corpus.h"
-#include "t9/tree.h"
-#include "t9/timer.h"
+#include "main.h"
 
 
 void build_corpus_tree(t9_model_t *const model) {
@@ -98,7 +93,7 @@ void example_autocomplete(t9_model_t *const model, const char * text) {
     free(suggestion);
 }
 
-int main() {
+int main(void) {
     t9_timer_t timer;
     t9_model_t *model;
     const char *train_file;
