@@ -12,7 +12,7 @@
  */
 
 list_t *
-list_new() {
+list_new(void) {
     list_t *self;
     if (!(self = LIST_MALLOC(sizeof(list_t))))
         return NULL;
@@ -73,9 +73,11 @@ list_rpush(list_t *self, list_node_t *node) {
 
 list_node_t *
 list_rpop(list_t *self) {
+    list_node_t *node;
+
     if (!self->len) return NULL;
 
-    list_node_t *node = self->tail;
+    node = self->tail;
 
     if (--self->len) {
         (self->tail = node->prev)->next = NULL;
@@ -93,9 +95,11 @@ list_rpop(list_t *self) {
 
 list_node_t *
 list_lpop(list_t *self) {
+    list_node_t *node;
+
     if (!self->len) return NULL;
 
-    list_node_t *node = self->head;
+    node = self->head;
 
     if (--self->len) {
         (self->head = node->next)->prev = NULL;

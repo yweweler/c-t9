@@ -72,17 +72,15 @@ There are two main parameters that control the model creation process:
 ### Debug
 
 ```
-mkdir debug
-cd debug
-cmake -DCMAKE_BUILD_TYPE=Debug ../
-make
+meson setup build --buildtype=debug
+cd build
+ninja
 ```
 
 ### Release
 
 ```
-mkdir release
-cd release
-cmake -DCMAKE_BUILD_TYPE=Release ../
-make
+meson setup build --buildtype=release
+cd build
+ninja
 ```

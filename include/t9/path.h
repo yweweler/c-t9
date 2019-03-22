@@ -35,9 +35,14 @@
 #ifndef C_T9_PATH_H
 #define C_T9_PATH_H
 
+// We use asprintf.
+// This function is a GNU extension, not in C or POSIX.
+#define _GNU_SOURCE
+#include <stdio.h>
+
 #define kvec_path_t(type) struct struct_kvec_path {size_t n, m; type *a; }
 
-#include <kvec/kvec.h>
+#include "libraries/kvec/kvec.h"
 
 // Forward declarations of path to break cyclic redundancy.
 struct struct_t9_path_t;
@@ -46,7 +51,6 @@ typedef struct struct_t9_path_t t9_path_t;
 typedef kvec_path_t(t9_path_t *) t9_path_vector_t;
 
 #include <string.h>
-#include <stdio.h>
 #include <stdbool.h>
 
 #include "t9/tree.h"
@@ -68,7 +72,7 @@ typedef struct struct_t9_path_t t9_path_t;
  * @return Pointer to the newly created path.
  */
 t9_path_t *
-t9_path_create();
+t9_path_create(void);
 
 /*!
  * Destroy a path.

@@ -33,12 +33,10 @@
   ******************************************************************************
   */
 
-#include <stdio.h>
-
 #include "t9/path.h"
 
 t9_path_t *
-t9_path_create() {
+t9_path_create(void) {
     t9_path_t *path;
 
     // Allocate memory.

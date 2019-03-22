@@ -35,10 +35,15 @@
 #ifndef C_T9_NODE_H
 #define C_T9_NODE_H
 
+// We use asprintf.
+// This function is a GNU extension, not in C or POSIX.
+#define _GNU_SOURCE
+#include <stdio.h>
+
 #define kvec_cnode_t(type) struct struct_kvec_cnode {size_t n, m; type *a; }
 #define kvec_snode_t(type) struct struct_kvec_snode {size_t n, m; type *a; }
 
-#include <kvec/kvec.h>
+#include "libraries/kvec/kvec.h"
 
 // Forward declarations of nodes to break cyclic redundancy.
 struct struct_t9_corpus_tree_t;
@@ -57,7 +62,7 @@ typedef kvec_cnode_t(t9_corpus_node_t *) t9_corpus_node_vector_t;
 typedef kvec_snode_t(t9_search_node_t *) t9_search_node_vector_t;
 
 #include <stdbool.h>
-#include <list/list.h>
+#include "libraries/list/list.h"
 
 #include "t9/corpus.h"
 #include "t9/math.h"
@@ -98,7 +103,7 @@ typedef struct struct_t9_search_node_t t9_search_node_t;
  * @return Pointer to a new corpus node.
  */
 t9_corpus_node_t *
-t9_corpus_node_create();
+t9_corpus_node_create(void);
 
 /*!
  * Destroy a corpus node.
@@ -175,7 +180,7 @@ t9_corpus_node_add_child(t9_corpus_node_t *const node,
  * @return Pointer to a new search node.
  */
 t9_search_node_t *
-t9_search_node_create();
+t9_search_node_create(void);
 
 /*!
  * Destroy a search node.

@@ -32,13 +32,13 @@
   ******************************************************************************
   */
 
-#include <list/list.h>
+#include "libraries/list/list.h"
 #include "t9/tree.h"
 
 /* === Corpus tree ================================================================== */
 
 t9_corpus_tree_t *
-t9_corpus_tree_create() {
+t9_corpus_tree_create(void) {
     t9_corpus_tree_t *tree;
 
     // Allocate memory.
@@ -173,7 +173,7 @@ t9_corpus_tree_finalize(t9_corpus_tree_t *const tree) {
 /* === Search tree ================================================================== */
 
 t9_search_tree_t *
-t9_search_tree_create() {
+t9_search_tree_create(void) {
     t9_search_tree_t *tree;
 
     // Allocate memory.
