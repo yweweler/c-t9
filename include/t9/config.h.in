@@ -1,0 +1,9 @@
+#pragma once
+
+/// Current version.
+///
+/// Follows [Semantic Versioning 2.0.0](https://semver.org)
+#mesondefine CT9_VERSION
+#mesondefine CT9_VERSION_MAJOR
+#mesondefine CT9_VERSION_MINOR
+#mesondefine CT9_VERSION_PATCH

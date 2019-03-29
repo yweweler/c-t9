@@ -101,6 +101,10 @@ int main(void) {
     size_t train_symbols;
     size_t test_symbols;
 
+    printf("==============================\n");
+    printf("C-T9 Version: %s\n", CT9_VERSION);
+    printf("==============================\n");
+
     model = t9_model_create();
 
     // Load the whole file for model training.

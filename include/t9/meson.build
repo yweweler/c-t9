@@ -1,3 +1,11 @@
+# Generate configuration header
+configure_file(
+    input: 'config.h.in',
+    output: 'config.h',
+    configuration: configuration,
+    install_dir: '/'.join([get_option('includedir'), 't9'])
+)
+
 # Install headers
 includes = files([
   'corpus.h',

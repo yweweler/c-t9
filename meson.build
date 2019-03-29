@@ -1,6 +1,6 @@
 # Project definition
 project('c-t9', 'c',
-    version: '0.0.2',
+    version: '1.0.1',
     license: 'MIT',
     default_options: ['c_std=c11'],
 meson_version: '>=0.46.0')
@@ -30,19 +30,26 @@ compiler_args = compiler.get_supported_arguments([
     '-DGNUC',
     '-DGNU_COMPILER',
 ])
-math_dep = compiler.find_library('m', required : true)
 add_project_arguments(compiler_args, language: 'c')
 
 # Configuration
 configuration = configuration_data()
+
+
+math_dep = compiler.find_library('m', required : true)
 
 # Dependencies list
 dependencies = [
   math_dep,
 ]
 
-# Version
+# Version.
 version = meson.project_version()
+version_array = version.split('.')
+configuration.set_quoted('CT9_VERSION', version)
+configuration.set('CT9_VERSION_MAJOR', version_array[0])
+configuration.set('CT9_VERSION_MINOR', version_array[1])
+configuration.set('CT9_VERSION_PATCH', version_array[2])
 
 # Libraries
 subdir('libraries')

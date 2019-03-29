@@ -38,6 +38,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+#include "t9/config.h"
 #include "t9/corpus.h"
 #include "t9/tree.h"
 #include "t9/timer.h"
