@@ -101,9 +101,9 @@ int main(void) {
     size_t train_symbols;
     size_t test_symbols;
 
-    printf("==============================\n");
-    printf("C-T9 Version: %s\n", CT9_VERSION);
-    printf("==============================\n");
+    printf("============================================================\n");
+    printf("C-T9 Version: %s | GIT: %s\n", CT9_VERSION, CT9_GIT_DESCRIPTION);
+    printf("============================================================\n");
 
     model = t9_model_create();
 

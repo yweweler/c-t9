@@ -1,4 +1,4 @@
-# Generate configuration header
+# Generate configuration header.
 configure_file(
     input: 'config.h.in',
     output: 'config.h',

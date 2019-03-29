@@ -51,6 +51,21 @@ configuration.set('CT9_VERSION_MAJOR', version_array[0])
 configuration.set('CT9_VERSION_MINOR', version_array[1])
 configuration.set('CT9_VERSION_PATCH', version_array[2])
 
+# This checks are inspired by the GNOME project.
+# Check if the project build from an git repo and if the git binary is actually available.
+git_bin = find_program('git', required: false, native: true)
+if run_command(
+  ['test', '-d', join_paths(meson.source_root(), '.git')]).returncode() == 0 and git_bin.found()
+  # git repo and git is available
+  git_version_str = run_command([git_bin.path(), 'describe', '--all', '--long']).stdout().strip()
+  git_version = '"' + git_version_str + '"'
+else
+  git_version = 'Unknown, shouldn\'t happen'
+endif
+
+configuration.set('CT9_GIT_DESCRIPTION', git_version)
+
+
 # Libraries
 subdir('libraries')
 

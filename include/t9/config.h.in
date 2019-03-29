@@ -7,3 +7,5 @@
 #mesondefine CT9_VERSION_MAJOR
 #mesondefine CT9_VERSION_MINOR
 #mesondefine CT9_VERSION_PATCH
+
+#mesondefine CT9_GIT_DESCRIPTION
