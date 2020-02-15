@@ -138,3 +138,4 @@ t9_read_file(const char *const path,
     fclose(fp);
     return T9_SUCCESS;
 }
+

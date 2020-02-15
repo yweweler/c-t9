@@ -44,3 +44,4 @@ t9_ln(float x) {
     }
     return (float) log(tmp);
 }
+

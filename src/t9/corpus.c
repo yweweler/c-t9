@@ -234,3 +234,4 @@ t9_corpus_lexicon_from_corpus(const t9_symbol_t *const __buffer,
 
     return T9_SUCCESS;
 }
+

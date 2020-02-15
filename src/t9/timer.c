@@ -73,3 +73,4 @@ t9_timer_duration_ms(t9_timer_t *const timer) {
     t9_timer_stop(timer);
     return ((double) (timer->end - timer->start) / CLOCKS_PER_SEC) * 1000.0;
 }
+

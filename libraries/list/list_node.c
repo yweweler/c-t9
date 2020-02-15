@@ -25,3 +25,4 @@ list_node_new(void *val) {
 void *list_node_data(list_node_t *self) {
     return self->val;
 }
+
