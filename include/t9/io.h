@@ -60,7 +60,7 @@ t9_file_exists(const char *const path, uint8_t *const exists);
  * @return T9_SUCCESS on success, T9_FAILURE otherwise.
  */
 t9_error_t
-t9_file_size(const char *const path, uint64_t *const size);
+t9_file_size(const char *const path, size_t *const size);
 
 /*!
  * Read the content of a file to memory.
